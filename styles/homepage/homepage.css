@@ -26,14 +26,47 @@ header {
   background-color: #fff;
 }
 
-.msidenav{
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1000;
-  background-color: #26a69a;
-  top: 0; 
+#mySidenav {
+  height: 100vh;
+  width: 0px;
+  position: absolute;
+  top: 0;
   left: 0;
+  z-index: 1000;
+  overflow: hidden;
+  color: #fff;
+  background-color: #26a69a;
+  transition: 0.5s;
+  padding-top: 40px;
+}
+
+.closebtn{
+  font-size: 27px;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+}
+
+.mynavbar {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.mynavbar .btn {
+  margin: 5px 5px;
+  background-color: #fff;
+  color: #111;
+}
+
+.mynavbar ul li {
+  padding: 15px;
+  cursor: pointer;
+}
+
+.mynavbar ul li:hover {
+  background-color: #fff;
+  color: #111;  
 }
 
 nav {
@@ -129,6 +162,7 @@ nav ul a {
 
 .category-group {
   height: 55px;
+  padding-left: 10px;
   overflow: hidden;
 }
 
@@ -231,12 +265,6 @@ nav ul a {
   vertical-align: middle;
 }
 
-@media (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
 
 
 /* ****************** FOOTER ***************************** */

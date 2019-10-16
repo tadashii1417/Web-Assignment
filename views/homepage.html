@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="../assets/css//materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../styles/homepage/index.css">
+  <link rel="stylesheet" href="../styles/homepage/homepage.css">
   <link rel="stylesheet" href="../styles/homepage/indexMedia.css">
 </head>
 
@@ -35,22 +35,29 @@
         <a class="waves-light btn submit-btn login">Login</a>
         <a class="waves-light btn join-btn">Join free</a>
       </div>
-      <i class="fa fa-bars" onclick="opennav()"></i>
-      <div class="msidenav">
-          <ul>
-              <li><a href="#">Collections</a></li>
-              <li><a href="#">Explore</a></li>
-              <li><a href="#">About us</a></li>
-            </ul>
-      </div>
+      <i class="fa fa-bars" onclick="openNav()"></i>
+
     </nav>
+
+    <div id="mySidenav" class="mynavbar">
+        <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">About us</a></li>
+      </ul>
+      <a class="waves-light btn ">Submit a photo</a>
+      <a class="waves-light btn ">Login</a>
+      <a class="waves-light btn ">Join free</a>
+    </div>
+
     <div class="category">
       <div class="category-group">
         <ul>
           <li><a href="#">Wallpapers</a></li>
           <li><a href="#">Nature</a></li>
           <li><a href="#">Architecture</a></li>
-          <li><a href="#">Business and work</a></li>
+          <li><a href="#">Business</a></li>
           <li><a href="#">Film</a></li>
           <li><a href="#">Animal</a></li>
           <li><a href="#">Travel</a></li>
