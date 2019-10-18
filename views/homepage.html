@@ -7,14 +7,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="../assets/css//materialize.min.css">
+  <link rel="stylesheet" href="../assets/css//materialize-social.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/homepage/homepage.css">
   <link rel="stylesheet" href="../styles/homepage/indexMedia.css">
   <style>
-    .modal {
+    #viewImageModal {
       width: 90% !important;
-      height: 100% !important;
+      max-height: 90% !important;
+    }
+    #viewInfoModal {
+      width: 40% !important;
     }
   </style>
 </head>
@@ -588,7 +592,7 @@
     </div>
   </footer>
   <div id="viewImageModal" class="modal">
-    <div class="modal-content container">
+    <div class="modal-content">
         <div class="row s2">
           <div class="left col s7">
               <div class="col s2">
@@ -615,15 +619,13 @@
           </div>
         </div>
         <div class="row s1  right-align">
-            <a class="btn white grey-text lighten-1"><i class="material-icons left">share</i>Share</a>
-            <a class="btn white grey-text lighten-1"><i class="material-icons left">info</i>Info</a>
+            <h7 class="grey-text left">cat nature beautiful</h7>
+            <a class="btn white grey-text lighten-1 modal-trigger" href="#shareModal"><i class="material-icons left">share</i>Share</a>
+            <a class="btn white grey-text lighten-1 modal-trigger" href="#viewInfoModal"><i class="material-icons left">info</i>Info</a>
         </div>
-        <div class="divider"></div>
-        <div class="row">
-          <h5>Related photos</h5>
-        </div>
-        <div class="row center-align">
-              <div class="col s4 img-container">
+        <div class="row center-align container">
+            <h5 class="left-align">Related photos</h5>
+            <div class="col s4 img-container">
                 <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%; z-index: -1;">
         
                  <div class="overlay" style="z-index: 0;">
@@ -733,8 +735,7 @@
           </div>
         </div>
         </div>
-        <div class="row align-left">
-            <div class="divider"></div>
+        <div class="row left-align container">
             <h5>Related Tags</h5><br> 
             <div class="chip " style="cursor: pointer;">
                 Plant
@@ -770,20 +771,96 @@
         </div>
     </div>
   </div>
+  <div id="viewInfoModal" class="modal">
+    <div class="modal-content">
+      <div class="section">
+        <h3>Info</h3>
+        <h6>Published on October 18, 2019</h6>
+      </div>
+      <div class="section">
+        <div class="row">
+        <div class="col s4">
+          <i class="materialize-icon">visibility</i><br>
+          <h3>9,351</h3>
+          <h6 class="grey-text">0 since last month</h6>
+        </div>
+        <div class="col s4">
+          <i class="materialize-icon">arrow_downward</i>
+          <h3>17</h3>
+          <h6 class="grey-text">0 since last month</h6>
+        </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <div class="row">
+          <div class="col s4">
+            <h6 class="grey-text">Camera Make</h6>
+            <h5>SONY</h5>
+          </div>
+          <div class="col s4">
+            <h6 class="grey-text">Camera Model</h6>
+            <h5>ILCE-6300</h5>
+          </div>
+          <div class="col s4">
+            <h6 class="grey-text">Focal Length</h6>
+          <h5>23.0mm</h5> 
+          </div>
+          <div class="col s4">
+            <h6 class="grey-text">Aperture</h6>
+            <h5>ƒ/4.0</h5>
+          </div>
+          <div class="col s4">
+            <h6 class="grey-text">Shutter Speed</h6>
+            <h5>1/160s</h5>
+          </div>
+          <div class="col s4">
+            <h6 class="grey-text">ISO</h6>
+            <h5>2000</h5>
+          </div>
+          <div class="col s4">
+            <h6 class="grey-text">Dimensions</h6>
+            <h5>2788 × 4182</h5>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="shareModal" class="modal">
+      <div class="modal-content">
+        <h4>Share</h4>
+        <h6>Photo by Florian Ohl</h6>
+        <div class="row">
+          <a class="btn grey lighten-5 grey-text"><i class="fa fa-facebook left light-blue-text darken-4"></i>Facebook</a>
+          <a class="btn grey lighten-5 grey-text"><i class="fa fa-pinterest left red-text accent-2"></i>Pinterest</a>
+          <a class="btn grey lighten-5 grey-text"><i class="fa fa-twitter left blue-text lighten-1 "></i>Twitter</a>
+          <a class="btn grey lighten-5 grey-text"><i class="material-icons left">email</i>Email</a>
+        </div>
+        <div class="input-field">
+          <input type="text"/>
+          <a class="btn grey darken-1 right">Copy link</a>
+        </div>
+      </div>
+    </div>
   <script src="../javascripts/materialize.min.js"></script>
   <script src="../javascripts/hompage.js"></script>
   <script>
       document.addEventListener('DOMContentLoaded', function() {
               let elems = document.querySelectorAll('.modal');
 
-              let [instance] = M.Modal.init(elems, { onOpenStart, });
-
+              let instances = M.Modal.init(elems, { onOpenStart, });
+              let imageInstance = M.Modal.init(document.getElementById('viewImageModal'), {onOpenStart, onOpenEnd});
+              let infoInstance = M.Modal.init(document.getElementById('viewInfoModal'));
+              let shareInstance = M.Modal.init(document.getElementById('shareModal'));
               function onOpenStart(modal,trigger) {
-                imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
+                let imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
                 mainImg = modal.getElementsByClassName("mainImage")[0];
                 mainImg.src = imgSrc;
                 modal.scrollTop = 0;
 
+              }
+              function onOpenEnd(modal, trigger) {
+                modal.scrollTop = 0;
               }
 
       });
