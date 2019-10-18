@@ -627,7 +627,7 @@
                 <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
         
                 <div class="overlay">
-                  <a href="#viewImageModal" class="modal-trigger" style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                  <a href="#viewImageModal" class="modal-trigger modal-close " style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
                   <div class="img-action">
                     <button>
                       <i class="fa fa-heart"></i>
@@ -654,7 +654,7 @@
                 <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
         
                 <div class="overlay">
-                  <a href="#viewImageModal" class="modal-trigger" style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                  <a href="#viewImageModal" class="modal-trigger modal-close " style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
                   <div class="img-action">
                     <button>
                       <i class="fa fa-heart"></i>
@@ -681,7 +681,7 @@
                 <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
         
                 <div class="overlay">
-                  <a href="#viewImageModal" class="modal-trigger" style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                  <a href="#viewImageModal" class="modal-trigger modal-close " style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
                   <div class="img-action">
                     <button>
                       <i class="fa fa-heart"></i>
@@ -708,7 +708,7 @@
                 <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
         
                 <div class="overlay">
-                  <a href="#viewImageModal" class="modal-trigger" style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                  <a href="#viewImageModal" class="modal-trigger modal-close " style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
                   <div class="img-action">
                     <button>
                       <i class="fa fa-heart"></i>
@@ -731,22 +731,55 @@
                   </div>
                 </div>
               </div>
+
+      <div class="col s4 img-container">
+          <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
+  
+          <div class="overlay">
+            <a href="#viewImageModal" class="modal-close modal-trigger" style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+            <div class="img-action">
+              <button>
+                <i class="fa fa-heart"></i>
+              </button>
+              <button>
+                <i class="fa fa-plus"></i>
+                Collect
+              </button>
+            </div>
+            <div class="img-user">
+              <div class="img-user-left">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                <span>Jason Park</span>
+              </div>
+              <div class="img-user-right">
+                <button>
+                  <i class="fa fa-download"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
     </div>
   </div>
   <script src="../javascripts/materialize.min.js"></script>
   <script src="../javascripts/hompage.js"></script>
   <script>
-    function onOpenStart(modal,trigger) {
-      imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
-      mainImg = modal.getElementsByClassName("mainImage")[0];
-      mainImg.src = imgSrc;
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-              var elems = document.querySelectorAll('.modal');
-              var instances = M.Modal.init(elems, { onOpenStart });
+      document.addEventListener('DOMContentLoaded', function() {
+              let elems = document.querySelectorAll('.modal');
 
-          });
+              let [instance] = M.Modal.init(elems, { onOpenStart, });
+
+              function onOpenStart(modal,trigger) {
+                imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
+                mainImg = modal.getElementsByClassName("mainImage")[0];
+                mainImg.src = imgSrc;
+                modal.scrollTop = 0;
+
+              }
+
+      });
+    
   </script>
 </body>
 </html>
