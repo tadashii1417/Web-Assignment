@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/homepage/homepage.css">
   <link rel="stylesheet" href="../styles/homepage/indexMedia.css">
+  <style>
+    .modal {
+      width: 90% !important;
+      height: 100% !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -50,7 +56,6 @@
       <a class="waves-light btn ">Login</a>
       <a class="waves-light btn ">Join free</a>
     </div>
-
     <div class="category">
       <div class="category-group">
         <ul>
@@ -95,9 +100,11 @@
   <section class='image-gallery'>
     <div class="column">
       <div class="img-container">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-        <div class="overlay">
-          <div class="img-action">
+          <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
+        
+        <div class="overlay" style="z-index: 0;">
+          <a href="#viewImageModal" class="modal-trigger" style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+          <div class="img-action" style="z-index: 2;">  
             <button>
               <i class="fa fa-heart"></i>
             </button>
@@ -106,7 +113,7 @@
               Collect
             </button>
           </div>
-          <div class="img-user">
+          <div class="img-user" style="z-index: 2;">
             <div class="img-user-left">
               <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
               <span>Jason Park</span>
@@ -119,6 +126,7 @@
           </div>
         </div>
       </div>
+
       <div class="img-container">
         <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
         <div class="overlay">
@@ -564,8 +572,57 @@
       </div>
     </div>
   </footer>
+  <div id="viewImageModal" class="modal">
+    <div class="modal-content">
+        <div class="row s2">
+          <div class="left col s7">
+              <div class="col s2">
+                  <img src="../images/cat.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                </div>
+                <div class="col s5">
+                  <span class="black-text">
+                    Kaiser Wilhem I von Hohenzollern<br>
+                  <h6 class="grey-text">
+                      NANI MOOOOOOOOOOOOOOOO
+                  </h6>
+                  </span>
+                </div>
+          </div>
+          <div class="right col">
+              <a class="btn white red-text"><i class="material-icons">favorite</i></a>
+              <a class="btn white grey-text lighten-1"><i class="material-icons left">add</i>Collect</a>
+              <a class="btn white grey-text lighten-1">Download</a>
+          </div>
+        </div>
+        <div class="row s8">
+          <div class="container center-align">
+              <img width="680px" src="../images/wallpaper.jpg">
+          </div>
+        </div>
+        <div class="row s1  right-align">
+            <a class="btn white grey-text lighten-1"><i class="material-icons left">share</i>Share</a>
+            <a class="btn white grey-text lighten-1"><i class="material-icons left">info</i>Info</a>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <h5>Related photos</h5>
+        </div>
+        <div class="container center-align">
 
+        </div>
+    </div>
+  </div>
+  <script src="../javascripts/materialize.min.js"></script>
   <script src="../javascripts/hompage.js"></script>
-</body>
+  <script>
+    function onOpenStart(modal,trigger) {
+      document.getElementBy
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+              var elems = document.querySelectorAll('.modal');
+              var instances = M.Modal.init(elems, { onOpenStart });
 
+          });
+  </script>
+</body>
 </html>
