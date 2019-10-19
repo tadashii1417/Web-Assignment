@@ -853,10 +853,10 @@
               let infoInstance = M.Modal.init(document.getElementById('viewInfoModal'));
               let shareInstance = M.Modal.init(document.getElementById('shareModal'));
               function onOpenStart(modal,trigger) {
+                modal.scrollTop = 0;
                 let imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
                 mainImg = modal.getElementsByClassName("mainImage")[0];
                 mainImg.src = imgSrc;
-                modal.scrollTop = 0;
 
               }
               function onOpenEnd(modal, trigger) {
