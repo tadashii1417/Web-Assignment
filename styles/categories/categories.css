@@ -1,0 +1,105 @@
+header {
+    position: relative;
+}
+
+.categories {
+    width: 90%;
+    margin: 10px auto;
+    line-height: 110%;
+}
+
+.categories h4 {
+    font-weight: bold;
+    margin: 25px 5px;
+}
+
+.categories h5 {
+    font-weight: 600;
+    color: #111;
+    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.34;
+    padding-left: 10px;
+}
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categories-container > * {
+    margin-bottom: 20px;
+}
+
+.photo-count {
+    padding-bottom: 15px;
+    color: #767676;
+    padding-left: 10px;
+}
+
+.description {
+    font-size: 17px;
+    margin-left: 5px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.category-images {
+    display: flex;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.category-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.first-images {
+    flex: 70%;
+    padding-right: 3px;
+    height: 35vh;
+}
+
+.second-images {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-images > * {
+    height: 50%;
+}
+
+.second-images> div:first-child {
+    padding-bottom: 3px;
+}
+
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.category-tags > * {
+    display: inline-block;
+    background-color: #eee;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: 26px;
+    height: 26px;
+    color: #767676;
+    margin-left: 5px;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+}
