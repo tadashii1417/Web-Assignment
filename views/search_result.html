@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css//materialize.min.css">
+    <link rel="stylesheet" href="../assets/css//materialize-social.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/homepage/homepage.css">
+    <link rel="stylesheet" href="../styles/categories/categories.css">
+    <link rel="stylesheet" href="../styles/homepage/indexMedia.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/img/logo.png" alt="logo">
+            </div>
+            <div class="searchbox">
+                <i class="material-icons">search</i>
+                <input type="text" placeholder="Search Photos">
+            </div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">Collections</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+            <div class="action-area">
+                <a class="waves-light btn submit-btn upload">Submit a photo</a>
+                <a class="waves-light btn submit-btn login">Login</a>
+                <a class="waves-light btn join-btn">Join free</a>
+            </div>
+            <i class="fa fa-bars" onclick="openNav()"></i>
+
+        </nav>
+        <div id="mySidenav" class="mynavbar">
+            <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
+            <ul>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+            <a class="waves-light btn ">Submit a photo</a>
+            <a class="waves-light btn ">Login</a>
+            <a class="waves-light btn ">Join free</a>
+        </div>
+        <div class="category">
+            <div class="category-group">
+                <ul>
+                    <li><a href="#">Wallpapers</a></li>
+                    <li><a href="#">Nature</a></li>
+                    <li><a href="#">Architecture</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Film</a></li>
+                    <li><a href="#">Animal</a></li>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">Art</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Experimental</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="categories">
+        <h4>"Hello"</h4>
+        <div class="description">
+            Search Result for "Hello".
+        </div>
+        <section class='image-gallery' style="margin-bottom: 10vh;">
+            <div class="column">
+                <div class="img-container">
+                    <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
+                    <div class="overlay" style="z-index: 0;">
+                        <a href="#viewImageModal" class="modal-trigger"
+                            style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                        <div class="img-action" style="z-index: 2;">
+                            <button>
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-plus"></i>
+                                Collect
+                            </button>
+                        </div>
+                        <div class="img-user" style="z-index: 2;">
+                            <div class="img-user-left">
+                                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                                <span>Jason Park</span>
+                            </div>
+                            <div class="img-user-right">
+                                <button>
+                                    <i class="fa fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-container">
+                    <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%; z-index: -1;">
+                    <div class="overlay" style="z-index: 0;">
+                        <a href="#viewImageModal" class="modal-trigger"
+                            style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                        <div class="img-action" style="z-index: 2;">
+                            <button>
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-plus"></i>
+                                Collect
+                            </button>
+                        </div>
+                        <div class="img-user" style="z-index: 2;">
+                            <div class="img-user-left">
+                                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                                <span>Jason Park</span>
+                            </div>
+                            <div class="img-user-right">
+                                <button>
+                                    <i class="fa fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column">
+
+                <div class="img-container">
+                    <img src="../assets/img/anime/i3.jpg" style="width:100%; z-index: -1;">
+                    <div class="overlay" style="z-index: 0;">
+                        <a href="#viewImageModal" class="modal-trigger"
+                            style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                        <div class="img-action" style="z-index: 2;">
+                            <button>
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-plus"></i>
+                                Collect
+                            </button>
+                        </div>
+                        <div class="img-user" style="z-index: 2;">
+                            <div class="img-user-left">
+                                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                                <span>Jason Park</span>
+                            </div>
+                            <div class="img-user-right">
+                                <button>
+                                    <i class="fa fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="img-container">
+                    <img src="../assets/img/anime/i2.jpg" style="width:100%; z-index: -1;">
+                    <div class="overlay" style="z-index: 0;">
+                        <a href="#viewImageModal" class="modal-trigger"
+                            style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                        <div class="img-action" style="z-index: 2;">
+                            <button>
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-plus"></i>
+                                Collect
+                            </button>
+                        </div>
+                        <div class="img-user" style="z-index: 2;">
+                            <div class="img-user-left">
+                                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                                <span>Jason Park</span>
+                            </div>
+                            <div class="img-user-right">
+                                <button>
+                                    <i class="fa fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="img-container">
+                    <img src="../assets/img/animal/bg3.jpg" style="width:100%; z-index: -1;">
+                    <div class="overlay" style="z-index: 0;">
+                        <a href="#viewImageModal" class="modal-trigger"
+                            style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                        <div class="img-action" style="z-index: 2;">
+                            <button>
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-plus"></i>
+                                Collect
+                            </button>
+                        </div>
+                        <div class="img-user" style="z-index: 2;">
+                            <div class="img-user-left">
+                                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                                <span>Jason Park</span>
+                            </div>
+                            <div class="img-user-right">
+                                <button>
+                                    <i class="fa fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-container">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%; z-index: -1;">
+                    <div class="overlay" style="z-index: 0;">
+                        <a href="#viewImageModal" class="modal-trigger"
+                            style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+                        <div class="img-action" style="z-index: 2;">
+                            <button>
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button>
+                                <i class="fa fa-plus"></i>
+                                Collect
+                            </button>
+                        </div>
+                        <div class="img-user" style="z-index: 2;">
+                            <div class="img-user-left">
+                                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                                <span>Jason Park</span>
+                            </div>
+                            <div class="img-user-right">
+                                <button>
+                                    <i class="fa fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">WEB ASSIGNMENT !</h5>
+                    <p class="grey-text text-lighten-4">This is our product for the assignment in web class.</p>
+
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">About us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Collections</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Category</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 Copyright
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="	fa fa-pinterest"></a>
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../javascripts/materialize.min.js"></script>
+    <script src="../javascripts/hompage.js"></script>
+</body>
+
+</html>
