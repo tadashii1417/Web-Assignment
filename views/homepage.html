@@ -849,20 +849,16 @@
               let elems = document.querySelectorAll('.modal');
 
               let instances = M.Modal.init(elems, { onOpenStart, });
-              let imageInstance = M.Modal.init(document.getElementById('viewImageModal'), {onOpenStart, onOpenEnd});
+              let imageInstance = M.Modal.init(document.getElementById('viewImageModal'), {onOpenStart});
               let infoInstance = M.Modal.init(document.getElementById('viewInfoModal'));
               let shareInstance = M.Modal.init(document.getElementById('shareModal'));
 
               var materialBoxInstance = M.Materialbox.init(document.querySelectorAll('.materialboxed'));
 
               function onOpenStart(modal,trigger) {
-                modal.scrollTop = 0;
                 let imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
                 mainImg = modal.getElementsByClassName("mainImage")[0];
                 mainImg.src = imgSrc;
-
-              }
-              function onOpenEnd(modal, trigger) {
                 modal.scrollTop = 0;
               }
 
