@@ -615,7 +615,7 @@
         </div>
         <div class="row s8">
           <div class="container center-align">
-              <img class="mainImage" width="680px" src="../images/wallpaper.jpg">
+              <img class="materialboxed mainImage" width="100%" src="../images/wallpaper.jpg">
           </div>
         </div>
         <div class="row s1  right-align">
@@ -852,6 +852,9 @@
               let imageInstance = M.Modal.init(document.getElementById('viewImageModal'), {onOpenStart, onOpenEnd});
               let infoInstance = M.Modal.init(document.getElementById('viewInfoModal'));
               let shareInstance = M.Modal.init(document.getElementById('shareModal'));
+
+              var materialBoxInstance = M.Materialbox.init(document.querySelectorAll('.materialboxed'));
+
               function onOpenStart(modal,trigger) {
                 modal.scrollTop = 0;
                 let imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
