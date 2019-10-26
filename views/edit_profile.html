@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Your Profile</title>
     <link rel="stylesheet" href="../assets/css/materialize.css">
     <link rel="stylesheet" href="../assets/css/materialize.min.css" media="screen,projection">
     <link rel="stylesheet" href="/styles/index.css">
@@ -15,148 +16,152 @@
 </head>
 
 <body class="" style="min-width: 320px;">
-    <div class="navbar-container navbar-container--fixed">
-        <div class="navbar navbar__element--hide-on-xs flex flex-center js-global-nav nav-shadow">
-            <div class="flex-push">
-                <a class="navbar__logo-container" href="#" title="Home — Unsplash">
-                    <img class="header-logo-img" src="../assets/img/logo.png">
-                </a>
-            </div>
+    <header>
+        <div class="navbar-container navbar-container--fixed">
+            <div class="navbar navbar__element--hide-on-xs flex flex-center js-global-nav nav-shadow">
+                <div class="flex-push">
+                    <a class="navbar__logo-container" href="#" title="Home — Unsplash">
+                        <img class="header-logo-img" src="../assets/img/logo.png">
+                    </a>
+                </div>
 
-            <ul class="nav flex flex-center">
+                <ul class="nav flex flex-center">
 
-                <li class="navbar__element navbar__element--heading ">
-                    <a href="#">Home</a>
-                </li>
+                    <li class="navbar__element navbar__element--heading ">
+                        <a href="#">Home</a>
+                    </li>
 
-                <li class="navbar__element navbar__element--heading ">
-                    <a href="#">Collections</a>
-                </li>
+                    <li class="navbar__element navbar__element--heading ">
+                        <a href="#">Collections</a>
+                    </li>
 
-                <li class="navbar__element navbar__element--heading navbar__element--hide-on-xs">
-                    <a href="#">Explore</a>
-                </li>
+                    <li class="navbar__element navbar__element--heading navbar__element--hide-on-xs">
+                        <a href="#">Explore</a>
+                    </li>
 
-                <li class="navbar__element navbar__element--heading navbar__element--hide-on-xs">
-                    <a href="#">About us</a>
-                </li>
-
-
-                <li class="navbar__element">
-                    <ul class="nav flex">
-                        <li class="navbar__element hidden-xs" style="padding-left: 12px;">
-                            <a class="btn btn-outline btn--small text-weight--medium" href="#">Submit a photo</a>
-                        </li>
-                        <li class="navbar__element--last-child">
-                            <a href="#">
-                                <img sizes="32px" class="avatar avatar--small avatar--small-mobile"
-                                    src="../assets/img/user_no_avatar.jpg" ix-initialized="ix-initialized">
-                                <span class="sr-only">Tester</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                </li>
-            </ul>
-        </div> <!-- close .navbar -->
-    </div> <!-- close .navbar-container -->
-
-    <div class="navbar-container navbar-container--fixed visible-xs">
+                    <li class="navbar__element navbar__element--heading navbar__element--hide-on-xs">
+                        <a href="#">About us</a>
+                    </li>
 
 
-        <nav class="navbar js-global-mobile-nav navbar--icons">
-            <ul class="navbar__icons-container flex flex-center">
-                <li class="navbar__element ">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
-                            class="icon icon--large">
-                            <style type="text/css">
-                                .st1 {
-                                    display: inline;
-                                }
+                    <li class="navbar__element">
+                        <ul class="nav flex">
+                            <li class="navbar__element hidden-xs" style="padding-left: 12px;">
+                                <a class="btn btn-outline btn--small text-weight--medium" href="#">Submit a photo</a>
+                            </li>
+                            <li class="navbar__element--last-child">
+                                <a href="#">
+                                    <img sizes="32px" class="avatar avatar--small avatar--small-mobile"
+                                        src="../assets/img/user_no_avatar.jpg" ix-initialized="ix-initialized">
+                                    <span class="sr-only">Tester</span>
+                                </a>
+                            </li>
+                        </ul>
 
-                                .st2 {
-                                    fill: none;
-                                }
+                    </li>
+                </ul>
+            </div> <!-- close .navbar -->
+        </div> <!-- close .navbar-container -->
 
-                                .st3 {
-                                    fill-rule: evenodd;
-                                    clip-rule: evenodd;
-                                }
-                            </style>
-                            <path d="M12 2l-10 10v10h8v-6h4v6h8v-10z" height="24"></path>
-                        </svg>
+        <div class="navbar-container navbar-container--fixed visible-xs">
 
-                    </a> </li>
 
-                <li class="navbar__element ">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
-                            class="icon icon--large">
-                            <style type="text/css">
-                                .st1 {
-                                    display: inline;
-                                }
+            <nav class="navbar js-global-mobile-nav navbar--icons">
+                <ul class="navbar__icons-container flex flex-center">
+                    <li class="navbar__element ">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                enable-background="new 0 0 24 24" class="icon icon--large">
+                                <style type="text/css">
+                                    .st1 {
+                                        display: inline;
+                                    }
 
-                                .st2 {
-                                    fill: none;
-                                }
+                                    .st2 {
+                                        fill: none;
+                                    }
 
-                                .st3 {
-                                    fill-rule: evenodd;
-                                    clip-rule: evenodd;
-                                }
-                            </style>
-                            <path
-                                d="M1.4 7.5c3.3 1.5 6.6 3 9.8 4.6.5.3 1 .3 1.5 0 3.3-1.5 6.6-3.1 9.8-4.6.2-.1.5-.1.5-.4 0-.2-.2-.3-.4-.4l-9.8-4.6c-.4-.2-1.1-.2-1.4 0-3.4 1.5-6.7 3.1-10 4.6-.2.1-.4.2-.4.4s.2.3.4.4zm13 .5v-2.8l5.6 1.5-8 3.7v-3.2l2.4.8zm8.5 8.6c-.1-.1-.2-.1-.2-.1l-1.7-.8c-.5-.2-1-.2-1.6 0-2.2 1-4.3 2-6.5 3.1-.5.2-1.1.3-1.6 0l-6.5-3c-.5-.3-1.1-.3-1.6 0l-1.6.8c-.4-.1-.6 0-.6.2 0 .3.2.3.4.4l9.8 4.6c.3.1.5.2.8.2.2 0 .6-.1.8-.2 3.3-1.5 6.5-3 9.7-4.5.1 0 .2-.1.3-.2.2-.2.2-.4.1-.5zm-21.5-4.3c3.2 1.5 6.5 3.1 9.8 4.6.2.1.7.2.8.2.1 0 .5-.1.7-.2l9.9-4.6c.1 0 .2-.1.2-.1.2-.1.2-.3 0-.5-.1-.1-.2-.1-.2-.1-.6-.3-1.2-.5-1.7-.8-.5-.2-1-.2-1.5 0-2.2 1-4.4 2-6.6 3.1-.5.2-1 .2-1.5 0-2.2-1-4.4-2-6.6-3.1-.5-.3-1.1-.3-1.6 0l-1.6.8c-.2.1-.5.1-.5.4 0 .2.3.3.4.3z"
-                                height="24"></path>
-                        </svg>
+                                    .st3 {
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    }
+                                </style>
+                                <path d="M12 2l-10 10v10h8v-6h4v6h8v-10z" height="24"></path>
+                            </svg>
 
-                    </a> </li>
+                        </a> </li>
 
-                <li class="navbar__element  js-mobile-search-nav">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
-                            class="icon icon--large">
-                            <style type="text/css">
-                                .st1 {
-                                    display: inline;
-                                }
+                    <li class="navbar__element ">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                enable-background="new 0 0 24 24" class="icon icon--large">
+                                <style type="text/css">
+                                    .st1 {
+                                        display: inline;
+                                    }
 
-                                .st2 {
-                                    fill: none;
-                                }
+                                    .st2 {
+                                        fill: none;
+                                    }
 
-                                .st3 {
-                                    fill-rule: evenodd;
-                                    clip-rule: evenodd;
-                                }
-                            </style>
-                            <path
-                                d="M16.5 15c2.2-2.9 2-7.2-.7-9.8-1.5-1.5-3.4-2.2-5.3-2.2s-3.8.7-5.3 2.2c-2.9 2.9-2.9 7.7 0 10.6 1.5 1.5 3.4 2.2 5.3 2.2 1.6 0 3.2-.5 4.5-1.5l4.5 4.5 1.4-1.4-4.4-4.6zm-2.1-.6c-1 1-2.4 1.6-3.9 1.6s-2.9-.6-3.9-1.6c-2.1-2.1-2.1-5.6 0-7.8 1-1 2.4-1.6 3.9-1.6s2.9.6 3.9 1.6c2.1 2.2 2.1 5.6 0 7.8z"
-                                height="24"></path>
-                        </svg>
+                                    .st3 {
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    }
+                                </style>
+                                <path
+                                    d="M1.4 7.5c3.3 1.5 6.6 3 9.8 4.6.5.3 1 .3 1.5 0 3.3-1.5 6.6-3.1 9.8-4.6.2-.1.5-.1.5-.4 0-.2-.2-.3-.4-.4l-9.8-4.6c-.4-.2-1.1-.2-1.4 0-3.4 1.5-6.7 3.1-10 4.6-.2.1-.4.2-.4.4s.2.3.4.4zm13 .5v-2.8l5.6 1.5-8 3.7v-3.2l2.4.8zm8.5 8.6c-.1-.1-.2-.1-.2-.1l-1.7-.8c-.5-.2-1-.2-1.6 0-2.2 1-4.3 2-6.5 3.1-.5.2-1.1.3-1.6 0l-6.5-3c-.5-.3-1.1-.3-1.6 0l-1.6.8c-.4-.1-.6 0-.6.2 0 .3.2.3.4.4l9.8 4.6c.3.1.5.2.8.2.2 0 .6-.1.8-.2 3.3-1.5 6.5-3 9.7-4.5.1 0 .2-.1.3-.2.2-.2.2-.4.1-.5zm-21.5-4.3c3.2 1.5 6.5 3.1 9.8 4.6.2.1.7.2.8.2.1 0 .5-.1.7-.2l9.9-4.6c.1 0 .2-.1.2-.1.2-.1.2-.3 0-.5-.1-.1-.2-.1-.2-.1-.6-.3-1.2-.5-1.7-.8-.5-.2-1-.2-1.5 0-2.2 1-4.4 2-6.6 3.1-.5.2-1 .2-1.5 0-2.2-1-4.4-2-6.6-3.1-.5-.3-1.1-.3-1.6 0l-1.6.8c-.2.1-.5.1-.5.4 0 .2.3.3.4.3z"
+                                    height="24"></path>
+                            </svg>
 
-                    </a> </li>
+                        </a> </li>
 
-                <li class="#">
-                    <ul class="nav flex">
-                        <li class="navbar__element hidden-xs" style="padding-left: 12px;">
-                            <a class="btn btn-outline btn--small text-weight--medium" href="/submit">Submit a photo</a>
-                        </li>
-                        <li class="navbar__element--last-child">
-                            <a href="#">
-                                <img sizes="32px" class="avatar avatar--small avatar--small-mobile"
-                                    src="../assets/img/user_no_avatar.jpg" ix-initialized="ix-initialized">
-                                <span class="sr-only">Tester</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <li class="navbar__element  js-mobile-search-nav">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                enable-background="new 0 0 24 24" class="icon icon--large">
+                                <style type="text/css">
+                                    .st1 {
+                                        display: inline;
+                                    }
 
-                </li>
-            </ul>
-        </nav>
-    </div>
+                                    .st2 {
+                                        fill: none;
+                                    }
+
+                                    .st3 {
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    }
+                                </style>
+                                <path
+                                    d="M16.5 15c2.2-2.9 2-7.2-.7-9.8-1.5-1.5-3.4-2.2-5.3-2.2s-3.8.7-5.3 2.2c-2.9 2.9-2.9 7.7 0 10.6 1.5 1.5 3.4 2.2 5.3 2.2 1.6 0 3.2-.5 4.5-1.5l4.5 4.5 1.4-1.4-4.4-4.6zm-2.1-.6c-1 1-2.4 1.6-3.9 1.6s-2.9-.6-3.9-1.6c-2.1-2.1-2.1-5.6 0-7.8 1-1 2.4-1.6 3.9-1.6s2.9.6 3.9 1.6c2.1 2.2 2.1 5.6 0 7.8z"
+                                    height="24"></path>
+                            </svg>
+
+                        </a> </li>
+
+                    <li class="#">
+                        <ul class="nav flex">
+                            <li class="navbar__element hidden-xs" style="padding-left: 12px;">
+                                <a class="btn btn-outline btn--small text-weight--medium" href="/submit">Submit a
+                                    photo</a>
+                            </li>
+                            <li class="navbar__element--last-child">
+                                <a href="#">
+                                    <img sizes="32px" class="avatar avatar--small avatar--small-mobile"
+                                        src="../assets/img/user_no_avatar.jpg" ix-initialized="ix-initialized">
+                                    <span class="sr-only">Tester</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
 
     <div class="wrapper">
         <div class="container">
@@ -321,7 +326,29 @@
 
     </div>
 
+    <footer class="page-footer">
+        <div class="ft-container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">WEB ASSIGNMENT !</h5>
+                    <p class="grey-text text-lighten-4">This is our product for the assignment in web class.</p>
 
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">About us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Collections</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Category</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="ft-container">
+                © 2019 Copyright
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
