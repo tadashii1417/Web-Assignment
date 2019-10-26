@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/materialize.css">
+    <link rel="stylesheet" href="../assets/css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/edit_profile/edit_profile.css">
+    <link rel="stylesheet" href="../styles/edit_profile/indexMedia.css">
+    <script src="../assets/js/materialize.js"></script>
+    <script src="../assets/js/materialize.min.js"></script>
+</head>
+
+<body class="" style="min-width: 320px;">
+    <div class="navbar-container navbar-container--fixed">
+        <div class="navbar navbar__element--hide-on-xs flex flex-center js-global-nav nav-shadow">
+            <div class="flex-push">
+                <a class="navbar__logo-container" href="#" title="Home — Unsplash">
+                    <img class="header-logo-img" src="../assets/img/logo.png">
+                </a>
+            </div>
+
+            <ul class="nav flex flex-center">
+
+                <li class="navbar__element navbar__element--heading ">
+                    <a href="#">Home</a>
+                </li>
+
+                <li class="navbar__element navbar__element--heading ">
+                    <a href="#">Collections</a>
+                </li>
+
+                <li class="navbar__element navbar__element--heading navbar__element--hide-on-xs">
+                    <a href="#">Explore</a>
+                </li>
+
+                <li class="navbar__element navbar__element--heading navbar__element--hide-on-xs">
+                    <a href="#">About us</a>
+                </li>
+
+
+                <li class="navbar__element">
+                    <ul class="nav flex">
+                        <li class="navbar__element hidden-xs" style="padding-left: 12px;">
+                            <a class="btn btn-outline btn--small text-weight--medium" href="#">Submit a photo</a>
+                        </li>
+                        <li class="navbar__element--last-child">
+                            <a href="#">
+                                <img sizes="32px" class="avatar avatar--small avatar--small-mobile"
+                                    src="../assets/img/user_no_avatar.jpg" ix-initialized="ix-initialized">
+                                <span class="sr-only">Tester</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div> <!-- close .navbar -->
+    </div> <!-- close .navbar-container -->
+
+    <div class="navbar-container navbar-container--fixed visible-xs">
+
+
+        <nav class="navbar js-global-mobile-nav navbar--icons">
+            <ul class="navbar__icons-container flex flex-center">
+                <li class="navbar__element ">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                            class="icon icon--large">
+                            <style type="text/css">
+                                .st1 {
+                                    display: inline;
+                                }
+
+                                .st2 {
+                                    fill: none;
+                                }
+
+                                .st3 {
+                                    fill-rule: evenodd;
+                                    clip-rule: evenodd;
+                                }
+                            </style>
+                            <path d="M12 2l-10 10v10h8v-6h4v6h8v-10z" height="24"></path>
+                        </svg>
+
+                    </a> </li>
+
+                <li class="navbar__element ">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                            class="icon icon--large">
+                            <style type="text/css">
+                                .st1 {
+                                    display: inline;
+                                }
+
+                                .st2 {
+                                    fill: none;
+                                }
+
+                                .st3 {
+                                    fill-rule: evenodd;
+                                    clip-rule: evenodd;
+                                }
+                            </style>
+                            <path
+                                d="M1.4 7.5c3.3 1.5 6.6 3 9.8 4.6.5.3 1 .3 1.5 0 3.3-1.5 6.6-3.1 9.8-4.6.2-.1.5-.1.5-.4 0-.2-.2-.3-.4-.4l-9.8-4.6c-.4-.2-1.1-.2-1.4 0-3.4 1.5-6.7 3.1-10 4.6-.2.1-.4.2-.4.4s.2.3.4.4zm13 .5v-2.8l5.6 1.5-8 3.7v-3.2l2.4.8zm8.5 8.6c-.1-.1-.2-.1-.2-.1l-1.7-.8c-.5-.2-1-.2-1.6 0-2.2 1-4.3 2-6.5 3.1-.5.2-1.1.3-1.6 0l-6.5-3c-.5-.3-1.1-.3-1.6 0l-1.6.8c-.4-.1-.6 0-.6.2 0 .3.2.3.4.4l9.8 4.6c.3.1.5.2.8.2.2 0 .6-.1.8-.2 3.3-1.5 6.5-3 9.7-4.5.1 0 .2-.1.3-.2.2-.2.2-.4.1-.5zm-21.5-4.3c3.2 1.5 6.5 3.1 9.8 4.6.2.1.7.2.8.2.1 0 .5-.1.7-.2l9.9-4.6c.1 0 .2-.1.2-.1.2-.1.2-.3 0-.5-.1-.1-.2-.1-.2-.1-.6-.3-1.2-.5-1.7-.8-.5-.2-1-.2-1.5 0-2.2 1-4.4 2-6.6 3.1-.5.2-1 .2-1.5 0-2.2-1-4.4-2-6.6-3.1-.5-.3-1.1-.3-1.6 0l-1.6.8c-.2.1-.5.1-.5.4 0 .2.3.3.4.3z"
+                                height="24"></path>
+                        </svg>
+
+                    </a> </li>
+
+                <li class="navbar__element  js-mobile-search-nav">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                            class="icon icon--large">
+                            <style type="text/css">
+                                .st1 {
+                                    display: inline;
+                                }
+
+                                .st2 {
+                                    fill: none;
+                                }
+
+                                .st3 {
+                                    fill-rule: evenodd;
+                                    clip-rule: evenodd;
+                                }
+                            </style>
+                            <path
+                                d="M16.5 15c2.2-2.9 2-7.2-.7-9.8-1.5-1.5-3.4-2.2-5.3-2.2s-3.8.7-5.3 2.2c-2.9 2.9-2.9 7.7 0 10.6 1.5 1.5 3.4 2.2 5.3 2.2 1.6 0 3.2-.5 4.5-1.5l4.5 4.5 1.4-1.4-4.4-4.6zm-2.1-.6c-1 1-2.4 1.6-3.9 1.6s-2.9-.6-3.9-1.6c-2.1-2.1-2.1-5.6 0-7.8 1-1 2.4-1.6 3.9-1.6s2.9.6 3.9 1.6c2.1 2.2 2.1 5.6 0 7.8z"
+                                height="24"></path>
+                        </svg>
+
+                    </a> </li>
+
+                <li class="#">
+                    <ul class="nav flex">
+                        <li class="navbar__element hidden-xs" style="padding-left: 12px;">
+                            <a class="btn btn-outline btn--small text-weight--medium" href="/submit">Submit a photo</a>
+                        </li>
+                        <li class="navbar__element--last-child">
+                            <a href="#">
+                                <img sizes="32px" class="avatar avatar--small avatar--small-mobile"
+                                    src="../assets/img/user_no_avatar.jpg" ix-initialized="ix-initialized">
+                                <span class="sr-only">Tester</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="sheet sheet--padding">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <ul class="nav nav--stacked">
+                            <h3 class="nav__heading delta text-weight--bold">Account settings</h3>
+
+                            <li class="active">
+                                <a href="#">Edit profile</a>
+                            </li>
+                            <li class="">
+                                <a href="#">Sample choice</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8 col-md-9">
+                        <div class="arch">
+                            <div class="arch-left">
+                                <h1 class="margin-bottom--small delta text-weight--bold">Edit profile</h1>
+                            </div> <!-- close .arch-left -->
+                        </div> <!-- close .arch -->
+
+
+
+                        <div class="form">
+                            <form class="edit_user" id="edit_user" action="#" accept-charset="UTF-8" method="post">
+                            </form>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 text-center">
+                                    <a href="#"
+                                        class="upload-circular-container profile-image-container js-general-uploader-pseudo-file-field">
+                                        <div class="upload-circular">
+                                            <img sizes="32px"
+                                                class="upload-circular__image upload-circular__image--large js-general-uploader-new-upload-target"
+                                                src="../assets/img/user_no_avatar.jpg" ix-initialized="ix-initialized">
+                                        </div> <!-- close .upload-circular -->
+
+                                        <p class="text-center zeta">Change
+                                            profile image</p>
+                                    </a> <!-- close .js -->
+                                </div>
+                                <div class="col-xs-12 col-sm-8">
+                                    <div class="form-group">
+                                        <label for="user_first_name">First name</label>
+                                        <input class="form-control" type="text" value="Tester" name="user[first_name]"
+                                            id="user_first_name">
+
+                                    </div> <!-- close .form-group -->
+
+                                    <div class="form-group">
+                                        <label for="user_last_name">Last name</label>
+                                        <input class="form-control" type="text" value="Zalo" name="user[last_name]"
+                                            id="user_last_name">
+
+                                    </div> <!-- close .form-group -->
+
+                                    <div class="form-group">
+                                        <label for="user_email">
+                                            Email address
+                                        </label>
+                                        <input class="form-control" type="email" value="sample@gmail.com"
+                                            name="user[email]" id="user_email">
+
+                                    </div> <!-- close .form-group -->
+                                </div> <!-- close .col -->
+                            </div> <!-- close .row -->
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="user_username">
+                                            Username <span class="text-secondary">(only letters, numbers, and
+                                                underscores)</span>
+                                        </label>
+                                        <input class="form-control" type="text" value="sample" name="user[username]"
+                                            id="user_username">
+
+                                        <div class="help-block text-secondary">
+                                            <p>https://sample.com/@<strong>sample</strong></p>
+                                        </div> <!-- close .help-block -->
+                                    </div> <!-- close .form-group -->
+                                </div> <!-- close .col -->
+
+
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="user_bio">Bio</label>
+
+                                        <div class="input-with-counter js-character-count-container">
+                                            <textarea class="form-control" rows="4" data-character-count="250"
+                                                name="user[bio]" id="user_bio"></textarea>
+                                            <div class="character-count character-count--textarea js-character-count">
+                                                250</div>
+                                        </div>
+
+
+                                    </div> <!-- close .form-group -->
+                                </div> <!-- close .col -->
+
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label for="user_interests">
+                                            Interests <span class="text-secondary">(maximum 5)</span>
+                                        </label>
+                                        <input type="text" name="user[user_tags_set][custom_tags]" id="user_interests"
+                                            value="" class="form-control" data-taggable="true" style="display: none;">
+                                        <div id="user_interests_tagsinput" class="tagsinput"
+                                            style="width: 100%; min-height: 100%; height: 100%;">
+                                            <div id="user_interests_addTag"><input id="user_interests_tag" value=""
+                                                    data-default="add a tag" placeholder="add a tag"
+                                                    class="ui-autocomplete-input" autocomplete="off"
+                                                    style="width: 200px;"></div>
+                                            <div class="tags_clear"></div>
+                                        </div>
+                                        <div class="help-block text-secondary">
+                                            <p>Your interests are generated from the types of photos you like,
+                                                collect, and contribute.</p>
+                                        </div> <!-- close .help-block -->
+
+                                    </div> <!-- close .form-group -->
+                                </div> <!-- close .col -->
+                            </div> <!-- close .row -->
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <input type="submit" name="commit" value="Update account"
+                                            class="btn btn-default btn-block-level" data-disable-with="···">
+                                    </div> <!-- close .form-group -->
+                                </div> <!-- close .col -->
+                            </div> <!-- close .row -->
+                            </form>
+                        </div> <!-- close .form -->
+
+                        <div class="hide">
+                            <form action="" class="js-general-uploader-s3-form js-edit-profile-image-s3-form"
+                                data-callback-method="POST" data-callback-param="file" enctype="multipart/form-data">
+                                <input type="file" name="file" id="file" class="js-general-uploader-s3-file-field">
+                            </form>
+
+                            <form class="js-edit-profile-image-form" action="/account/profile_image"
+                                accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input
+                                    type="hidden" name="_method" value="put"><input type="hidden"
+                                    name="authenticity_token"
+                                    value="Sii90293UG7ysKDtyrZcKitiaWeuLujXSmR2zNRi7FGfUfQEfx3FoY+Hb0cIFtBI/bQ2H9jGCWVDzJ2VwhVJEQ==">
+
+                                <div class="hide js-general-uploader-form">
+                                </div>
+
+                                <input type="submit" name="commit" value="Save" class="js-general-uploader-form-submit"
+                                    data-disable-with="Save">
+                            </form>
+                        </div> <!-- close .hide -->
+                    </div>
+                </div> <!-- close .row -->
+            </div> <!-- close .sheet -->
+        </div> <!-- close .container -->
+
+    </div>
+
+
+</body>
+
+</html>
