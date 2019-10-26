@@ -24,7 +24,9 @@
     width: 80%;
   }
   .column {
-    flex: 50%;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
     max-width: 50%;
   }
 }
@@ -42,7 +44,9 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .column {
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     max-width: 100%;
   }
   .searchbox {
