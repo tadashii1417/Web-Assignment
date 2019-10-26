@@ -31,16 +31,18 @@
     display: none;
 }
 
+
+#avatar {
+    width: 15%;
+    height: auto;
+}
+
 /* Extremely large device */
 @media only screen and (max-width : 1300px) {
     
     #user-buttons-mobile {
         display: none;
         margin-top: 20px;
-    }
-    #avatar {
-        width: 20%;
-        height: auto;
     }
 }
   
