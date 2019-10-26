@@ -60,8 +60,9 @@
         <img id="avatar" src="../images/cat.jpg" alt="" class="left circle responsive-img">
         <!-- notice the "circle" class -->
         <div class="row left left-align">
-          <h3 class="col s12">Kaiser Wilhem
-            <div class="right" id="user-buttons">
+          <div class="col s12">
+          <div class="left" style="font-size: 200%; line-height: 100%;">Kaiser Wilhem</div>
+            <div class="right " id="user-buttons">
               <a href="#" class="btn btn-mini white blue-grey-text darken-3">Edit profile</a>
               <a href="#" class="btn btn-mini white blue-grey-text dropdown-trigger darken-3" data-target="dropdown1">...</a>
               <ul id='dropdown1' class='dropdown-content'>
@@ -70,13 +71,13 @@
                 <li><a href="#!">Logout</a></li>
               </ul>
             </div>
-          </h3>
+          </div>
           <div class="col s12">NANI MOOOOO</div>
         </div>
       </div>
       <div class="col s3"></div>
     </div>
-    <div clas="row section">
+    <div class="row section">
         <div class="col s12 center-align" id="user-buttons-mobile">
             <a href="#" class="btn  blue-grey-text darken-3 btn-floating"><i class="material-icons">person</i></a>
             <a href="#!" class="btn   blue-grey-text darken-3 btn-floating"><i class="material-icons">settings</i></a>
@@ -96,7 +97,7 @@
 
     <div id="like" class="row s2 section center-align">
       <div class="img-container col s12 m6 l4">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;" alt="wallpaper">
 
         <div class="overlay" style="z-index: 0;">
           <a href="#viewImageModal" class="modal-trigger"
@@ -124,7 +125,7 @@
         </div>
       </div>
       <div class="img-container col s12 m6 l4">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;" alt="wallpaper">
 
         <div class="overlay" style="z-index: 0;">
           <a href="#viewImageModal" class="modal-trigger"
@@ -152,7 +153,7 @@
         </div>
       </div>
       <div class="img-container col s12 m6 l4">
-        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
+        <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;" alt="wallpaper">
 
         <div class="overlay" style="z-index: 0;">
           <a href="#viewImageModal" class="modal-trigger"
@@ -217,12 +218,12 @@
           </div>
       <div class="row s8">
         <div class="col s12 center-align">
-            <img class="mainImage"  src="../images/wallpaper.jpg">
+            <img class="mainImage"  src="../images/wallpaper.jpg" alt="Main image">
         </div>
       </div>
       </div>
       <div class="row s1 right-align">
-        <h7 class="grey-text left">cat nature beautiful</h7>
+        <h6 class="grey-text left">cat nature beautiful</h6>
         <a class="btn white grey-text lighten-1 modal-trigger" href="#shareModal"><i
             class="material-icons">share</i></a>
         <a class="btn white grey-text lighten-1 modal-trigger" href="#viewInfoModal"><i
@@ -231,7 +232,7 @@
       <div class="row center-align container">
         <h5 class="left-align">Related photos</h5>
         <div class="col s12 m6 l4 img-container">
-          <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%; z-index: -1;">
+          <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%; z-index: -1;" alt="wallpaper">
 
           <div class="overlay" style="z-index: 0;">
             <a href="#viewImageModal" class="modal-trigger modal-close "
@@ -259,7 +260,7 @@
           </div>
         </div>
         <div class="col s12 m6 l4 img-container">
-          <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%; z-index: -1;">
+          <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%; z-index: -1;"  alt="wallpaper">
 
           <div class="overlay" style="z-index: 0;">
             <a href="#viewImageModal" class="modal-trigger modal-close "
@@ -287,7 +288,7 @@
           </div>
         </div>
         <div class="col s12 m6 l4 img-container">
-          <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
+          <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;"  alt="wallpaper">
 
           <div class="overlay" style="z-index: 0;">
             <a href="#viewImageModal" class="modal-trigger modal-close "
@@ -316,7 +317,7 @@
         </div>
 
         <div class="col s12 m6 l4 img-container">
-          <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%; z-index: -1;">
+          <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%; z-index: -1;"  alt="wallpaper">
 
           <div class="overlay" style="z-index: 0;">
             <a href="#viewImageModal" class="modal-close modal-trigger"
@@ -379,7 +380,6 @@
 
       </div>
     </div>
-  </div>
   <div id="viewInfoModal" class="modal">
     <div class="modal-content">
       <div class="section">
@@ -467,12 +467,12 @@
       <div class="row s11" style="border: 1px dashed;">
         <div class="col s12 valign-wrapper" style="height: 250px;">
           <div class="container">
-              <h6 class="center-align" id="tooltip-upload">Drop your image here or <a href="#!"
-                  class="file-field grey-text accent-4">browse<input type="file" onchange="readURL(this)"
-                    id="fileInput"></a></h6>
-              <h6 class="center-align" id="tooltip-upload-mobile"><a href="#!"
-                  class="file-field grey-text accent-4">Browse<input type="file" onchange="readURL(this)"
-                    id="fileInput"></a></h6>
+              <h6 class="center-align" id="tooltip-upload">Drop your image here or <a href="#!" onclick="document.getElementById('fileInput').click();"
+                  class="file-field grey-text accent-4">browse</a></h6>
+              <h6 class="center-align" id="tooltip-upload-mobile"><a href="#!" onclick="document.getElementById('fileInput').click();"
+                class="file-field grey-text accent-4">Browse</a></h6>
+                  <input type="file" style="display: none;" onchange="readURL(this)"
+                    id="fileInput">
           </div>
         </div>
         <div class="col s1">

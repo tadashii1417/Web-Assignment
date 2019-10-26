@@ -71,6 +71,9 @@
     #user-buttons-mobile {
         display: block !important;
     }
+    #avatar {
+        width: 100%;
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -92,9 +95,6 @@
     }
     #uploadTips {
         display: none;
-    }
-    #avatar {
-        width: 100%;
     }
     .mainImage {
         width: 100%;
