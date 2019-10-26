@@ -1,12 +1,12 @@
 /* Extremely large device */
-@media only screen and (max-width : 1300px) {
+@media only screen and (max-width: 1300px) {
   nav {
     padding: 0 4%;
   }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width: 1200px) {
   .navigation {
     display: none;
   }
@@ -19,7 +19,7 @@
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width: 992px) {
   .heading-welcome {
     width: 80%;
   }
@@ -30,18 +30,17 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
   .action-area {
     display: none;
   }
   .searchbox {
     width: 50%;
   }
-
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width: 480px) {
   .column {
     flex: 100%;
     max-width: 100%;
@@ -52,7 +51,7 @@
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width: 320px) {
   .heading-welcome {
     font-size: 15px;
     width: 90%;
