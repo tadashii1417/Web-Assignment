@@ -45,6 +45,7 @@ img {
 
 .header-logo-img {
   width: 175px;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
   padding-bottom: 12px;
 }
@@ -62,9 +63,13 @@ img {
   margin: 0 0 6px;
   font-weight: 700;
   padding: 0;
+  -webkit-margin-before: 0.67em;
   margin-block-start: 0.67em;
+  -webkit-margin-after: 0.67em;
   margin-block-end: 0.67em;
+  -webkit-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   display: block;
 }
@@ -75,9 +80,13 @@ img {
   font-weight: 400;
   line-height: 1.6;
   display: block;
+  -webkit-margin-before: 1em;
   margin-block-start: 1em;
+  -webkit-margin-after: 1em;
   margin-block-end: 1em;
+  -webkit-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
   margin-inline-end: 0px;
 }
 
@@ -97,10 +106,14 @@ img {
 }
 
 .btn-facebook {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: #4c66a4;
   text-decoration: none;
@@ -132,7 +145,6 @@ svg:not(:root) {
   text-decoration: inherit;
   width: 18px;
   height: 18px;
-  -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -167,14 +179,14 @@ textarea {
 }
 
 .form-group label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
   max-width: 100%;
   margin-bottom: 6px;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-size: 15px;
@@ -205,8 +217,8 @@ p,
 }
 
 .row {
-  margin-left: -12px;
-  margin-right: -12px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .col-xs-1,
