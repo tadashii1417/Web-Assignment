@@ -1,0 +1,110 @@
+
+#viewImageModal {
+    width: 90% !important;
+    max-height: 90% !important;
+}
+
+#viewInfoModal {
+    width: 60% !important;
+    max-height: 100% !important;
+}
+.mainImage {
+    width: 75%;
+}
+
+#view-image-actions-mobile {
+    display: none;
+}
+
+#user-buttons-mobile {
+    display: none;
+}
+
+.actions-mobile {
+    display: none;
+}
+#share-actions-mobile {
+    display: none;
+}
+/* Extremely large device */
+@media only screen and (max-width : 1300px) {
+    
+    #user-buttons-mobile {
+        display: none;
+        margin-top: 20px;
+    }
+    #avatar {
+        width: 20%;
+        height: auto;
+    }
+}
+  
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+    #viewImageModal {   
+        width: 100% !important;
+    }
+
+    #viewInfoModal {
+        width: 100% !important;
+    }
+    #shareModal {
+        width: 100% !important;
+    }
+
+    #uploadModal {
+        width: 100% !important;
+    }
+    #uploadTips {
+        display: none;
+    }
+    #user-buttons {
+        display: none;
+    }
+    #user-buttons-mobile {
+        display: block !important;
+    }
+    #avatar {
+        width: 100%;
+    }
+    #view-image-actions {
+        display: none;
+    }
+    #view-image-actions-mobile {
+        display: block;
+    }
+    .mainImage {
+        width: 100%;
+    }
+    .actions-hd {
+        display: none;
+    }
+    .actions-mobile {
+        display: inline;
+    }
+    #share-actions{
+        display: none;
+    }
+    #share-actions-mobile {
+        display: block;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+}

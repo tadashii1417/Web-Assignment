@@ -12,16 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/homepage/homepage.css">
   <link rel="stylesheet" href="../styles/homepage/indexMedia.css">
-  <style>
-    #viewImageModal {
-      width: 90% !important;
-      max-height: 90% !important;
-    }
-
-    #viewInfoModal {
-      width: 40% !important;
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/homepage/userMedia.css">
 </head>
 
 <body>
@@ -66,11 +57,11 @@
     <div class="row s3 section center-align">
       <div class="col s3"></div>
       <div class="col s6">
-        <img src="../images/cat.jpg" alt="" style="width: 20%; height: auto;" class="left circle responsive-img">
+        <img id="avatar" src="../images/cat.jpg" alt="" class="left circle responsive-img">
         <!-- notice the "circle" class -->
         <div class="row left left-align">
           <h3 class="col s12">Kaiser Wilhem
-            <div class="right">
+            <div class="right" id="user-buttons">
               <a href="#" class="btn btn-mini white blue-grey-text darken-3">Edit profile</a>
               <a href="#" class="btn btn-mini white blue-grey-text dropdown-trigger darken-3" data-target="dropdown1">...</a>
               <ul id='dropdown1' class='dropdown-content'>
@@ -85,6 +76,14 @@
       </div>
       <div class="col s3"></div>
     </div>
+    <div clas="row section">
+        <div class="col s12 center-align" id="user-buttons-mobile">
+            <a href="#" class="btn  blue-grey-text darken-3 btn-floating"><i class="material-icons">person</i></a>
+            <a href="#!" class="btn   blue-grey-text darken-3 btn-floating"><i class="material-icons">settings</i></a>
+            <a href="#uploadModal" class="modal-trigger btn   blue-grey-text darken-3 btn-floating"><i class="material-icons">file_upload</i></a>
+            <a href="#!" class="btn   blue-grey-text darken-3 btn-floating"><i class="material-icons">arrow_back</i></a>
+          </div>
+    </div>
     <div class="row section s5">
       <div class="col s12">
         <ul class="tabs">
@@ -96,7 +95,7 @@
     </div>
 
     <div id="like" class="row s2 section center-align">
-      <div class="img-container col s4">
+      <div class="img-container col s12 m6 l4">
         <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
 
         <div class="overlay" style="z-index: 0;">
@@ -124,7 +123,7 @@
           </div>
         </div>
       </div>
-      <div class="img-container col s4">
+      <div class="img-container col s12 m6 l4">
         <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
 
         <div class="overlay" style="z-index: 0;">
@@ -152,7 +151,7 @@
           </div>
         </div>
       </div>
-      <div class="img-container col s4">
+      <div class="img-container col s12 m6 l4">
         <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
 
         <div class="overlay" style="z-index: 0;">
@@ -187,43 +186,51 @@
   </section>
   <div id="viewImageModal" class="modal">
     <div class="modal-content">
-      <div class="row s2">
-        <div class="left col s7">
-          <div class="col s2">
-            <img src="../images/cat.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+      <div class="row">
+        <div class="col s1">
+          <div class="row">
+            <div class="col s12">
+                <img src="../images/cat.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
           </div>
-          <div class="col s5">
+        </div>
+          <div class="col s6">
             <span class="black-text">
               Kaiser Wilhem I von Hohenzollern<br>
-              <h6 class="grey-text">
+              <span class="grey-text" style="font-size: 80%;">
                 NANI MOOOOOOOOOOOOOOOO
-              </h6>
+              </span>
             </span>
           </div>
-        </div>
-        <div class="right col">
-          <a class="btn white red-text"><i class="material-icons">favorite</i></a>
-          <a class="btn white blue-grey-text darken-4"><i class="material-icons left">add</i>Collect</a>
-          <a class="btn white blue-grey-text darken-4">Download</a>
-        </div>
-      </div>
-      <div class="row s8">
-        <div class="col s12">
-          <div class="container">
-            <img class="mainImage materialboxed"  width="100%" src="../images/wallpaper.jpg">
+          <div id="view-image-actions" class="col s5 right-align">
+              <a class="btn white red-text"><i class="material-icons">favorite</i></a>
+              <a class="btn white blue-grey-text darken-4"><i class="material-icons left">add</i>Collect</a>
+              <a class="btn white blue-grey-text darken-4">Download</a>
           </div>
+          </div>
+          <div class="row">
+          <div id="view-image-actions-mobile" class="col s12 left-align">
+              <a class="btn btn-small white red-text"><i class="material-icons">favorite</i></a>
+              <a class="btn btn-small white blue-grey-text darken-4"><i class="material-icons">add</i></a>
+              <a class="btn btn-small white blue-grey-text darken-4 right"><i class="material-icons">file_download</i></a>
+          </div>
+          </div>
+      <div class="row s8">
+        <div class="col s12 center-align">
+            <img class="mainImage"  src="../images/wallpaper.jpg">
+        </div>
       </div>
       </div>
-      <div class="row s1  right-align">
+      <div class="row s1 right-align">
         <h7 class="grey-text left">cat nature beautiful</h7>
         <a class="btn white grey-text lighten-1 modal-trigger" href="#shareModal"><i
-            class="material-icons left">share</i>Share</a>
+            class="material-icons">share</i></a>
         <a class="btn white grey-text lighten-1 modal-trigger" href="#viewInfoModal"><i
-            class="material-icons left">info</i>Info</a>
+            class="material-icons">info</i></a>
       </div>
       <div class="row center-align container">
         <h5 class="left-align">Related photos</h5>
-        <div class="col s4 img-container">
+        <div class="col s12 m6 l4 img-container">
           <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%; z-index: -1;">
 
           <div class="overlay" style="z-index: 0;">
@@ -251,7 +258,7 @@
             </div>
           </div>
         </div>
-        <div class="col s4 img-container">
+        <div class="col s12 m6 l4 img-container">
           <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%; z-index: -1;">
 
           <div class="overlay" style="z-index: 0;">
@@ -279,7 +286,7 @@
             </div>
           </div>
         </div>
-        <div class="col s4 img-container">
+        <div class="col s12 m6 l4 img-container">
           <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
 
           <div class="overlay" style="z-index: 0;">
@@ -308,7 +315,7 @@
           </div>
         </div>
 
-        <div class="col s4 img-container">
+        <div class="col s12 m6 l4 img-container">
           <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%; z-index: -1;">
 
           <div class="overlay" style="z-index: 0;">
@@ -381,12 +388,12 @@
       </div>
       <div class="section">
         <div class="row">
-          <div class="col s4">
+          <div class="col s4 m6">
             <i class="materialize-icon">visibility</i><br>
             <h3>9,351</h3>
             <h6 class="grey-text">0 since last month</h6>
           </div>
-          <div class="col s4">
+          <div class="col s4 m6">
             <i class="materialize-icon">arrow_downward</i>
             <h3>17</h3>
             <h6 class="grey-text">0 since last month</h6>
@@ -396,31 +403,31 @@
       <div class="divider"></div>
       <div class="section">
         <div class="row">
-          <div class="col s4">
+          <div class="col s6 m4">
             <h6 class="grey-text">Camera Make</h6>
             <h5>SONY</h5>
           </div>
-          <div class="col s4">
+          <div class="col s6 m4">
             <h6 class="grey-text">Camera Model</h6>
             <h5>ILCE-6300</h5>
           </div>
-          <div class="col s4">
+          <div class="col s6 m4">
             <h6 class="grey-text">Focal Length</h6>
             <h5>23.0mm</h5>
           </div>
-          <div class="col s4">
+          <div class="col s6 m4">
             <h6 class="grey-text">Aperture</h6>
             <h5>ƒ/4.0</h5>
           </div>
-          <div class="col s4">
+          <div class="col s6 m4">
             <h6 class="grey-text">Shutter Speed</h6>
             <h5>1/160s</h5>
           </div>
-          <div class="col s4">
+          <div class="col s6 m4">
             <h6 class="grey-text">ISO</h6>
             <h5>2000</h5>
           </div>
-          <div class="col s4">
+          <div class="col s6 m4">
             <h6 class="grey-text">Dimensions</h6>
             <h5>2788 × 4182</h5>
           </div>
@@ -432,11 +439,17 @@
     <div class="modal-content">
       <h4>Share</h4>
       <h6>Photo by Florian Ohl</h6>
-      <div class="row">
-        <a class="btn grey lighten-5 grey-text"><i class="fa fa-facebook left light-blue-text darken-4"></i>Facebook</a>
-        <a class="btn grey lighten-5 grey-text"><i class="fa fa-pinterest left red-text accent-2"></i>Pinterest</a>
-        <a class="btn grey lighten-5 grey-text"><i class="fa fa-twitter left blue-text lighten-1 "></i>Twitter</a>
-        <a class="btn grey lighten-5 grey-text"><i class="material-icons left">email</i>Email</a>
+      <div class="row" id="share-actions">
+        <a class="btn btn-small grey lighten-5 col m3"><i class="fa fa-facebook left light-blue-text darken-4"></i>Facebook</a>
+        <a class="btn btn-small grey lighten-5 col m3"><i class="fa fa-pinterest left red-text accent-2"></i>Pinterest</a>
+        <a class="btn btn-small grey lighten-5 col m3"><i class="fa fa-twitter left blue-text lighten-1 "></i>Twitter</a>
+        <a class="btn btn-small grey lighten-5 col m3"><i class="material-icons left">email</i>Email</a>
+      </div>
+      <div class="row" id="share-actions-mobile">
+        <a class="btn btn-small grey lighten-5 col s4"><i class="fa fa-facebook light-blue-text darken-4"></i></a>
+        <a class="btn btn-small grey lighten-5 col s4"><i class="fa fa-pinterest red-text accent-2"></i></a>
+        <a class="btn btn-small grey lighten-5 col s4"><i class="fa fa-twitter blue-text lighten-1 "></i></a>
+        <a class="btn grey lighten-5 black-text col s12"><i class="material-icons">email</i>Email</a>
       </div>
       <div class="input-field">
         <input type="text" />
@@ -444,7 +457,7 @@
       </div>
     </div>
   </div>
-  <div id="uploadModal" class="modal" style="width: 65% !important; max-height: 90% !important;">
+  <div id="uploadModal" class="modal">
     <div class="modal-content">
       <div class="row s1">
         <div class="col s12">
