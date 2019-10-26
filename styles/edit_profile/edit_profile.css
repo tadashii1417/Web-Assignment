@@ -1,6 +1,7 @@
 *,
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -19,10 +20,15 @@ img {
 ul {
   display: block;
   list-style-type: disc;
+  -webkit-margin-before: 1em;
   margin-block-start: 1em;
+  -webkit-margin-after: 1em;
   margin-block-end: 1em;
+  -webkit-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
   margin-inline-end: 0px;
+  -webkit-padding-start: 40px;
   padding-inline-start: 40px;
 }
 
@@ -33,6 +39,7 @@ li {
 
 .header-logo-img {
   width: 175px;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
   padding: 0 12px;
 }
@@ -73,14 +80,12 @@ li {
 
 .flex {
   display: -webkit-box !important;
-  display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
 
 .flex-push {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
@@ -93,7 +98,6 @@ li {
 .navbar__logo-container {
   display: inline-block;
   -webkit-transform: translateY(-1px);
-  -ms-transform: translateY(-1px);
   transform: translateY(-1px);
 }
 
@@ -148,6 +152,8 @@ li {
   text-align: center;
   letter-spacing: 0.5px;
 
+  -webkit-transition: background-color 0.2s ease-out;
+
   transition: background-color 0.2s ease-out;
   cursor: pointer;
   font-size: 14px;
@@ -169,6 +175,7 @@ li {
   fill: currentColor;
   background-color: #fff;
   border-color: #d1d1d1;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -225,7 +232,6 @@ li {
   list-style: none;
   text-align: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 57px;
@@ -270,7 +276,6 @@ li {
   text-decoration: inherit;
   width: 18px;
   height: 18px;
-  -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
@@ -415,9 +420,13 @@ h6 {
 h3 {
   display: block;
   font-size: 1.17em;
+  -webkit-margin-before: 1em;
   margin-block-start: 1em;
+  -webkit-margin-after: 1em;
   margin-block-end: 1em;
+  -webkit-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
 }
@@ -470,9 +479,13 @@ h3 {
 h1 {
   display: block;
   font-size: 2em;
+  -webkit-margin-before: 0.67em;
   margin-block-start: 0.67em;
+  -webkit-margin-after: 0.67em;
   margin-block-end: 0.67em;
+  -webkit-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
 }
@@ -536,9 +549,13 @@ p,
 
 p {
   display: block;
+  -webkit-margin-before: 1em;
   margin-block-start: 1em;
+  -webkit-margin-after: 1em;
   margin-block-end: 1em;
+  -webkit-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
   margin-inline-end: 0px;
 }
 
@@ -548,16 +565,13 @@ p {
 
 label {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
   max-width: 100%;
   margin-bottom: 6px;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -623,6 +637,7 @@ input {
   border-width: 2px;
   border-style: inset;
   border-color: initial;
+  -o-border-image: initial;
   border-image: initial;
 }
 
@@ -646,6 +661,7 @@ label span {
 }
 
 header {
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 1px rgba(1, 0, 0, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 1px rgba(1, 0, 0, 0.1);
   z-index: 999;
   width: 100%;
@@ -662,15 +678,12 @@ header {
   overflow: hidden;
   min-height: 50px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 10px 0px;
@@ -679,7 +692,11 @@ header {
 }
 
 .footer-copyright .ft-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
