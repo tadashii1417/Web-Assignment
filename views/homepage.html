@@ -12,16 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/homepage/homepage.css">
   <link rel="stylesheet" href="../styles/homepage/indexMedia.css">
-  <style>
-    #viewImageModal {
-      width: 90% !important;
-      max-height: 90% !important;
-    }
-
-    #viewInfoModal {
-      width: 40% !important;
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/homepage/userMedia.css">
 </head>
 
 <body>
@@ -42,7 +33,7 @@
         </ul>
       </div>
       <div class="action-area">
-        <a class="waves-light btn submit-btn upload">Submit a photo</a>
+        <a class="waves-light btn submit-btn upload modal-trigger" href="#uploadModal">Submit a photo</a>
         <a class="waves-light btn submit-btn login" href="./login.html">Login</a>
         <a class="waves-light btn join-btn" href="./register.html">Join free</a>
       </div>
@@ -57,7 +48,7 @@
         <li><a href="#">Explore</a></li>
         <li><a href="#">About us</a></li>
       </ul>
-      <a class="waves-light btn ">Submit a photo</a>
+      <a class="waves-light btn modal-trigger" href="#uploadModal">Submit a photo</a>
       <a class="waves-light btn ">Login</a>
       <a class="waves-light btn ">Join free</a>
     </div>
@@ -607,234 +598,337 @@
       </div>
     </div>
   </footer>
+  
   <div id="viewImageModal" class="modal">
-    <div class="modal-content">
-      <div class="row s2">
-        <div class="left col s7">
-          <div class="col s2">
-            <img src="../images/cat.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-          </div>
-          <div class="col s5">
-            <span class="black-text">
-              Kaiser Wilhem I von Hohenzollern<br>
-              <h6 class="grey-text">
-                NANI MOOOOOOOOOOOOOOOO
-              </h6>
-            </span>
-          </div>
-        </div>
-        <div class="right col">
-          <a class="btn white red-text"><i class="material-icons">favorite</i></a>
-          <a class="btn white blue-grey-text darken-4"><i class="material-icons left">add</i>Collect</a>
-          <a class="btn white blue-grey-text darken-4">Download</a>
-        </div>
-      </div>
-      <div class="row s8">
-        <div class="container center-align">
-          <img class="materialboxed mainImage" width="100%" src="../images/wallpaper.jpg">
-        </div>
-      </div>
-      <div class="row s1  right-align">
-        <h7 class="grey-text left">cat nature beautiful</h7>
-        <a class="btn white grey-text lighten-1 modal-trigger" href="#shareModal"><i
-            class="material-icons left">share</i>Share</a>
-        <a class="btn white grey-text lighten-1 modal-trigger" href="#viewInfoModal"><i
-            class="material-icons left">info</i>Info</a>
-      </div>
-      <div class="row center-align container">
-        <h5 class="left-align">Related photos</h5>
-        <div class="col s4 img-container">
-          <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%; z-index: -1;" alt="image">
-
-          <div class="overlay" style="z-index: 0;">
-            <a href="#viewImageModal" class="modal-trigger modal-close "
-              style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
-            <div class="img-action" style="z-index: 2;">
-              <button>
-                <i class="fa fa-heart"></i>
-              </button>
-              <button>
-                <i class="fa fa-plus"></i>
-                Collect
-              </button>
-            </div>
-            <div class="img-user">
-              <div class="img-user-left" style="z-index: 2;">
-                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
-                <span>Jason Park</span>
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s1 m1">
+            <div class="row">
+              <div class="col s12">
+                  <img src="../images/cat.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
               </div>
-              <div class="img-user-right">
+            </div>
+          </div>
+            <div class="col s11 m6">
+              <span class="black-text">
+                Kaiser Wilhem I von Hohenzollern<br>
+                <span class="grey-text" style="font-size: 80%;">
+                  NANI MOOOOOOOOOOOOOOOO
+                </span>
+              </span>
+            </div>
+            <div id="view-image-actions" class="col s5 m5 right-align">
+                <a class="btn white red-text"><i class="material-icons">favorite</i></a>
+                <a class="btn white blue-grey-text darken-4"><i class="material-icons left">add</i>Collect</a>
+                <a class="btn white blue-grey-text darken-4">Download</a>
+            </div>
+            </div>
+            <div class="row">
+            <div id="view-image-actions-mobile" class="col s12 left-align">
+                <a class="btn btn-small white red-text"><i class="material-icons">favorite</i></a>
+                <a class="btn btn-small white blue-grey-text darken-4"><i class="material-icons">add</i></a>
+                <a class="btn btn-small white blue-grey-text darken-4 right"><i class="material-icons">file_download</i></a>
+            </div>
+            </div>
+        <div class="row s8">
+          <div class="col s12 center-align">
+              <img class="mainImage"  src="../images/wallpaper.jpg">
+          </div>
+        </div>
+        </div>
+        <div class="row s1 right-align">
+          <h7 class="grey-text left">cat nature beautiful</h7>
+          <a class="btn white grey-text lighten-1 modal-trigger" href="#shareModal"><i
+              class="material-icons">share</i></a>
+          <a class="btn white grey-text lighten-1 modal-trigger" href="#viewInfoModal"><i
+              class="material-icons">info</i></a>
+        </div>
+        <div class="row center-align container">
+          <h5 class="left-align">Related photos</h5>
+          <div class="col s12 m6 l4 img-container">
+            <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%; z-index: -1;">
+  
+            <div class="overlay" style="z-index: 0;">
+              <a href="#viewImageModal" class="modal-trigger modal-close "
+                style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+              <div class="img-action" style="z-index: 2;">
                 <button>
-                  <i class="fa fa-download"></i>
+                  <i class="fa fa-heart"></i>
+                </button>
+                <button>
+                  <i class="fa fa-plus"></i>
+                  Collect
                 </button>
               </div>
+              <div class="img-user" style="z-index: 2;">
+                <div class="img-user-left" style="z-index: 2;">
+                  <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                  <span>Jason Park</span>
+                </div>
+                <div class="img-user-right">
+                  <button>
+                    <i class="fa fa-download"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col s4 img-container">
-          <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%; z-index: -1;" alt="image">
-
-          <div class="overlay" style="z-index: 0;">
-            <a href="#viewImageModal" class="modal-trigger modal-close "
-              style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
-            <div class="img-action" style="z-index: 2;">
-              <button>
-                <i class="fa fa-heart"></i>
-              </button>
-              <button>
-                <i class="fa fa-plus"></i>
-                Collect
-              </button>
-            </div>
-            <div class="img-user">
-              <div class="img-user-left" style="z-index: 2;">
-                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
-                <span>Jason Park</span>
-              </div>
-              <div class="img-user-right">
+          <div class="col s12 m6 l4 img-container">
+            <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%; z-index: -1;">
+  
+            <div class="overlay" style="z-index: 0;">
+              <a href="#viewImageModal" class="modal-trigger modal-close "
+                style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+              <div class="img-action" style="z-index: 2;">
                 <button>
-                  <i class="fa fa-download"></i>
+                  <i class="fa fa-heart"></i>
+                </button>
+                <button>
+                  <i class="fa fa-plus"></i>
+                  Collect
                 </button>
               </div>
+              <div class="img-user" style="z-index: 2;">
+                <div class="img-user-left" style="z-index: 2;">
+                  <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                  <span>Jason Park</span>
+                </div>
+                <div class="img-user-right">
+                  <button>
+                    <i class="fa fa-download"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col s4 img-container">
-          <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;" alt="image">
-
-          <div class="overlay" style="z-index: 0;">
-            <a href="#viewImageModal" class="modal-trigger modal-close "
-              style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
-            <div class="img-action" style="z-index: 2;">
-              <button>
-                <i class="fa fa-heart"></i>
-              </button>
-              <button>
-                <i class="fa fa-plus"></i>
-                Collect
-              </button>
-            </div>
-            <div class="img-user">
-              <div class="img-user-left" style="z-index: 2;">
-                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
-                <span>Jason Park</span>
-              </div>
-              <div class="img-user-right">
+          <div class="col s12 m6 l4 img-container">
+            <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%; z-index: -1;">
+  
+            <div class="overlay" style="z-index: 0;">
+              <a href="#viewImageModal" class="modal-trigger modal-close "
+                style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+              <div class="img-action" style="z-index: 2;">
                 <button>
-                  <i class="fa fa-download"></i>
+                  <i class="fa fa-heart"></i>
+                </button>
+                <button>
+                  <i class="fa fa-plus"></i>
+                  Collect
                 </button>
               </div>
+              <div class="img-user" style="z-index: 2;">
+                <div class="img-user-left" style="z-index: 2;">
+                  <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                  <span>Jason Park</span>
+                </div>
+                <div class="img-user-right">
+                  <button>
+                    <i class="fa fa-download"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col s12 m6 l4 img-container">
+            <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%; z-index: -1;">
+  
+            <div class="overlay" style="z-index: 0;">
+              <a href="#viewImageModal" class="modal-close modal-trigger"
+                style="position: absolute; top: 0; left: 0; z-index: 1; height: 100%; width: 100%;"></a>
+              <div class="img-action" style="z-index: 2;">
+                <button>
+                  <i class="fa fa-heart"></i>
+                </button>
+                <button>
+                  <i class="fa fa-plus"></i>
+                  Collect
+                </button>
+              </div>
+              <div class="img-user" style="z-index: 2;">
+                <div class="img-user-left" style="z-index: 2;">
+                  <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                  <span>Jason Park</span>
+                </div>
+                <div class="img-user-right">
+                  <button>
+                    <i class="fa fa-download"></i>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="row left-align container">
+          <h5>Related Tags</h5><br>
+          <div class="chip " style="cursor: pointer;">
+            Plant
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Food
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Pumpkin
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Vegetable
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Produce
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Squash
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Animal
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Cat
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Mammal
+          </div>
+          <div class="chip" style="cursor: pointer;">
+            Pet
+          </div>
+  
+        </div>
       </div>
-      <div class="row left-align container">
-        <h5>Related Tags</h5><br>
-        <div class="chip " style="cursor: pointer;">
-          Plant
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Food
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Pumpkin
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Vegetable
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Produce
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Squash
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Animal
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Cat
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Mammal
-        </div>
-        <div class="chip" style="cursor: pointer;">
-          Pet
-        </div>
-
-      </div>
-    </div>
-  </div>
+      
   <div id="viewInfoModal" class="modal">
-    <div class="modal-content">
-      <div class="section">
-        <h3>Info</h3>
-        <h6>Published on October 18, 2019</h6>
-      </div>
-      <div class="section">
-        <div class="row">
-          <div class="col s4">
-            <i class="materialize-icon">visibility</i><br>
-            <h3>9,351</h3>
-            <h6 class="grey-text">0 since last month</h6>
-          </div>
-          <div class="col s4">
-            <i class="materialize-icon">arrow_downward</i>
-            <h3>17</h3>
-            <h6 class="grey-text">0 since last month</h6>
+      <div class="modal-content">
+        <div class="section">
+          <h3>Info</h3>
+          <h6>Published on October 18, 2019</h6>
+        </div>
+        <div class="section">
+          <div class="row">
+            <div class="col s4 m6">
+              <i class="materialize-icon">visibility</i><br>
+              <h3>9,351</h3>
+              <h6 class="grey-text">0 since last month</h6>
+            </div>
+            <div class="col s4 m6">
+              <i class="materialize-icon">arrow_downward</i>
+              <h3>17</h3>
+              <h6 class="grey-text">0 since last month</h6>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="divider"></div>
-      <div class="section">
-        <div class="row">
-          <div class="col s4">
-            <h6 class="grey-text">Camera Make</h6>
-            <h5>SONY</h5>
-          </div>
-          <div class="col s4">
-            <h6 class="grey-text">Camera Model</h6>
-            <h5>ILCE-6300</h5>
-          </div>
-          <div class="col s4">
-            <h6 class="grey-text">Focal Length</h6>
-            <h5>23.0mm</h5>
-          </div>
-          <div class="col s4">
-            <h6 class="grey-text">Aperture</h6>
-            <h5>ƒ/4.0</h5>
-          </div>
-          <div class="col s4">
-            <h6 class="grey-text">Shutter Speed</h6>
-            <h5>1/160s</h5>
-          </div>
-          <div class="col s4">
-            <h6 class="grey-text">ISO</h6>
-            <h5>2000</h5>
-          </div>
-          <div class="col s4">
-            <h6 class="grey-text">Dimensions</h6>
-            <h5>2788 × 4182</h5>
+        <div class="divider"></div>
+        <div class="section">
+          <div class="row">
+            <div class="col s6 m4">
+              <h6 class="grey-text">Camera Make</h6>
+              <h5>SONY</h5>
+            </div>
+            <div class="col s6 m4">
+              <h6 class="grey-text">Camera Model</h6>
+              <h5>ILCE-6300</h5>
+            </div>
+            <div class="col s6 m4">
+              <h6 class="grey-text">Focal Length</h6>
+              <h5>23.0mm</h5>
+            </div>
+            <div class="col s6 m4">
+              <h6 class="grey-text">Aperture</h6>
+              <h5>ƒ/4.0</h5>
+            </div>
+            <div class="col s6 m4">
+              <h6 class="grey-text">Shutter Speed</h6>
+              <h5>1/160s</h5>
+            </div>
+            <div class="col s6 m4">
+              <h6 class="grey-text">ISO</h6>
+              <h5>2000</h5>
+            </div>
+            <div class="col s6 m4">
+              <h6 class="grey-text">Dimensions</h6>
+              <h5>2788 × 4182</h5>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  
+    
   <div id="shareModal" class="modal">
-    <div class="modal-content">
-      <h4>Share</h4>
-      <h6>Photo by Florian Ohl</h6>
-      <div class="row">
-        <a class="btn grey lighten-5 grey-text"><i class="fa fa-facebook left light-blue-text darken-4"></i>Facebook</a>
-        <a class="btn grey lighten-5 grey-text"><i class="fa fa-pinterest left red-text accent-2"></i>Pinterest</a>
-        <a class="btn grey lighten-5 grey-text"><i class="fa fa-twitter left blue-text lighten-1 "></i>Twitter</a>
-        <a class="btn grey lighten-5 grey-text"><i class="material-icons left">email</i>Email</a>
-      </div>
-      <div class="input-field">
-        <input type="text" />
-        <a class="btn grey darken-1 right">Copy link</a>
+      <div class="modal-content">
+        <h4>Share</h4>
+        <h6>Photo by Florian Ohl</h6>
+        <div class="row" id="share-actions">
+          <a class="btn btn-small black-text grey lighten-5 col m3"><i class="fa fa-facebook left light-blue-text darken-4"></i>Facebook</a>
+          <a class="btn btn-small black-text grey lighten-5 col m3"><i class="fa fa-pinterest left red-text accent-2"></i>Pinterest</a>
+          <a class="btn btn-small black-text grey lighten-5 col m3"><i class="fa fa-twitter left blue-text lighten-1 "></i>Twitter</a>
+          <a class="btn btn-small black-text grey lighten-5 col m3"><i class="material-icons left">email</i>Email</a>
+        </div>
+        <div class="row" id="share-actions-mobile">
+          <a class="btn btn-small black-text grey lighten-5 col s4"><i class="fa fa-facebook light-blue-text darken-4"></i></a>
+          <a class="btn btn-small black-text grey lighten-5 col s4"><i class="fa fa-pinterest red-text accent-2"></i></a>
+          <a class="btn btn-small black-text grey lighten-5 col s4"><i class="fa fa-twitter blue-text lighten-1 "></i></a>
+          <a class="btn grey lighten-5 black-text col s12"><i class="material-icons">email</i>Email</a>
+        </div>
+        <div class="input-field">
+          <input type="text" />
+          <a class="btn grey darken-1 right">Copy link</a>
+        </div>
       </div>
     </div>
-  </div>
+
+  <div id="uploadModal" class="modal">
+      <div class="modal-content">
+        <div class="row s1">
+          <div class="col s12">
+            <h5>Publish your first photo</h5>
+          </div>
+        </div>
+        <div class="row s11" style="border: 1px dashed;">
+          <div class="col s12 valign-wrapper" style="height: 250px;">
+            <div class="container">
+              <h6 class="center-align" id="tooltip-upload">Drop your image here or <a href="#!"
+                  class="file-field grey-text accent-4">browse<input type="file" onchange="readURL(this)"
+                    id="fileInput"></a></h6>
+              <h6 class="center-align" id="tooltip-upload-mobile"><a href="#!"
+                  class="file-field grey-text accent-4">Browse<input type="file" onchange="readURL(this)"
+                    id="fileInput"></a></h6>
+            </div>
+          </div>
+          <div class="col s1">
+          </div>
+          <div class="col s10" id="uploadTips">
+            <div class="row">
+              <div class="col s4">
+                <ul>
+                  <li class="grey-text darken-4">• <b>High quality photos</b> (at least <b>5MP</b>)</li>
+                  <li class="grey-text darken-4">• Photos are <b>clear & original</b></li>
+                </ul>
+              </div>
+              <div class="col s4">
+                <ul>
+                  <li class="grey-text darken-4">• Only upload photos you <b>own the rights</b> to</li>
+                  <li class="grey-text darken-4">• Zero tolerance for nudity, violence or hate</li>
+                </ul>
+              </div>
+              <div class="col s4">
+                <ul>
+                  <li class="grey-text darken-4">• Respect the intellectual property of others</li>
+                  <li class="grey-text darken-4">• Read the terms</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col s1">
+  
+          </div>
+        </div>
+        <div class="row center-align" id="previewRow">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="btn btn-white btn-tiny modal-close">Cancel</a>
+        <a href="#!" class="btn btn-grey btn-tiny">Publish</a>
+      </div>
+    </div>
   <script src="../javascripts/materialize.min.js"></script>
   <script src="../javascripts/hompage.js"></script>
   <script>
@@ -845,14 +939,15 @@
       let imageInstance = M.Modal.init(document.getElementById('viewImageModal'), { onOpenStart });
       let infoInstance = M.Modal.init(document.getElementById('viewInfoModal'));
       let shareInstance = M.Modal.init(document.getElementById('shareModal'));
+      let uploadInstance = M.Modal.init(document.getElementById('uploadModal'));
 
       var materialBoxInstance = M.Materialbox.init(document.querySelectorAll('.materialboxed'));
 
       function onOpenStart(modal, trigger) {
+        modal.scrollTop = 0;
         let imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
         mainImg = modal.getElementsByClassName("mainImage")[0];
         mainImg.src = imgSrc;
-        modal.scrollTop = 0;
       }
 
     });

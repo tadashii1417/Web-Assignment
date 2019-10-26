@@ -187,14 +187,14 @@
   <div id="viewImageModal" class="modal">
     <div class="modal-content">
       <div class="row">
-        <div class="col s1">
+        <div class="col s1 m1">
           <div class="row">
             <div class="col s12">
                 <img src="../images/cat.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
             </div>
           </div>
         </div>
-          <div class="col s6">
+          <div class="col s11 m6">
             <span class="black-text">
               Kaiser Wilhem I von Hohenzollern<br>
               <span class="grey-text" style="font-size: 80%;">
@@ -202,7 +202,7 @@
               </span>
             </span>
           </div>
-          <div id="view-image-actions" class="col s5 right-align">
+          <div id="view-image-actions" class="col m5 right-align">
               <a class="btn white red-text"><i class="material-icons">favorite</i></a>
               <a class="btn white blue-grey-text darken-4"><i class="material-icons left">add</i>Collect</a>
               <a class="btn white blue-grey-text darken-4">Download</a>
@@ -440,15 +440,15 @@
       <h4>Share</h4>
       <h6>Photo by Florian Ohl</h6>
       <div class="row" id="share-actions">
-        <a class="btn btn-small grey lighten-5 col m3"><i class="fa fa-facebook left light-blue-text darken-4"></i>Facebook</a>
-        <a class="btn btn-small grey lighten-5 col m3"><i class="fa fa-pinterest left red-text accent-2"></i>Pinterest</a>
-        <a class="btn btn-small grey lighten-5 col m3"><i class="fa fa-twitter left blue-text lighten-1 "></i>Twitter</a>
-        <a class="btn btn-small grey lighten-5 col m3"><i class="material-icons left">email</i>Email</a>
+        <a class="btn btn-small black-text grey lighten-5 col m3"><i class="fa fa-facebook left light-blue-text darken-4"></i>Facebook</a>
+        <a class="btn btn-small black-text grey lighten-5 col m3"><i class="fa fa-pinterest left red-text accent-2"></i>Pinterest</a>
+        <a class="btn btn-small black-text grey lighten-5 col m3"><i class="fa fa-twitter left blue-text lighten-1 "></i>Twitter</a>
+        <a class="btn btn-small black-text grey lighten-5 col m3"><i class="material-icons left">email</i>Email</a>
       </div>
       <div class="row" id="share-actions-mobile">
-        <a class="btn btn-small grey lighten-5 col s4"><i class="fa fa-facebook light-blue-text darken-4"></i></a>
-        <a class="btn btn-small grey lighten-5 col s4"><i class="fa fa-pinterest red-text accent-2"></i></a>
-        <a class="btn btn-small grey lighten-5 col s4"><i class="fa fa-twitter blue-text lighten-1 "></i></a>
+        <a class="btn btn-small black-text grey lighten-5 col s4"><i class="fa fa-facebook light-blue-text darken-4"></i></a>
+        <a class="btn btn-small black-text grey lighten-5 col s4"><i class="fa fa-pinterest red-text accent-2"></i></a>
+        <a class="btn btn-small black-text grey lighten-5 col s4"><i class="fa fa-twitter blue-text lighten-1 "></i></a>
         <a class="btn grey lighten-5 black-text col s12"><i class="material-icons">email</i>Email</a>
       </div>
       <div class="input-field">
@@ -467,9 +467,12 @@
       <div class="row s11" style="border: 1px dashed;">
         <div class="col s12 valign-wrapper" style="height: 250px;">
           <div class="container">
-            <h6 class="center-align">Drop your image here or <a href="#!"
-                class="file-field grey-text accent-4">browse<input type="file" onchange="readURL(this)"
-                  id="fileInput"></a></h6>
+              <h6 class="center-align" id="tooltip-upload">Drop your image here or <a href="#!"
+                  class="file-field grey-text accent-4">browse<input type="file" onchange="readURL(this)"
+                    id="fileInput"></a></h6>
+              <h6 class="center-align" id="tooltip-upload-mobile"><a href="#!"
+                  class="file-field grey-text accent-4">Browse<input type="file" onchange="readURL(this)"
+                    id="fileInput"></a></h6>
           </div>
         </div>
         <div class="col s1">
@@ -512,29 +515,13 @@
   <script src="../javascripts/hompage.js"></script>
   <script>
 
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-          previewRow.innerHTML = previewRow.innerHTML + `
-                <div class="col s4">
-                  <img width="100%" class="materialboxed" src=${e.target.result}>
-                </div>
-                `
-        }
-
-        reader.readAsDataURL(input.files[0]);
-
-        document.getElementById('uploadTips').style.display = 'none';
-      }
-    }
+  
     document.addEventListener('DOMContentLoaded', function () {
 
       let elems = document.querySelectorAll('.modal');
 
       // let instances = M.Modal.init(elems, { onOpenStart, });
-      let imageInstance = M.Modal.init(document.getElementById('viewImageModal'), { onOpenStart, onOpenEnd });
+      let imageInstance = M.Modal.init(document.getElementById('viewImageModal'), { onOpenStart });
       let infoInstance = M.Modal.init(document.getElementById('viewInfoModal'));
       let shareInstance = M.Modal.init(document.getElementById('shareModal'));
       let uploadInstance = M.Modal.init(document.getElementById('uploadModal'));
@@ -551,10 +538,6 @@
         let imgSrc = trigger.parentElement.parentElement.firstElementChild.src;
         mainImg = modal.getElementsByClassName("mainImage")[0];
         mainImg.src = imgSrc;
-
-      }
-      function onOpenEnd(modal, trigger) {
-        modal.scrollTop = 0;
       }
 
     });

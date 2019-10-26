@@ -26,6 +26,11 @@
 #share-actions-mobile {
     display: none;
 }
+
+#tooltip-upload-mobile {
+    display: none;
+}
+
 /* Extremely large device */
 @media only screen and (max-width : 1300px) {
     
@@ -51,18 +56,33 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+    #view-image-actions {
+        display: none;
+    }
+    #view-image-actions-mobile {
+        display: block;
+    }
+    #viewInfoModal {
+        width: 90% !important;
+    }
+    #user-buttons {
+        display: none;
+    }
+    #user-buttons-mobile {
+        display: block !important;
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
+    #viewInfoModal {
+        width: 100% !important;
+    }
     #viewImageModal {   
         width: 100% !important;
     }
 
-    #viewInfoModal {
-        width: 100% !important;
-    }
     #shareModal {
         width: 100% !important;
     }
@@ -73,20 +93,8 @@
     #uploadTips {
         display: none;
     }
-    #user-buttons {
-        display: none;
-    }
-    #user-buttons-mobile {
-        display: block !important;
-    }
     #avatar {
         width: 100%;
-    }
-    #view-image-actions {
-        display: none;
-    }
-    #view-image-actions-mobile {
-        display: block;
     }
     .mainImage {
         width: 100%;
@@ -101,6 +109,14 @@
         display: none;
     }
     #share-actions-mobile {
+        display: block;
+    }
+
+    #tooltip-upload {
+        display: none;
+    }
+
+    #tooltip-upload-mobile {
         display: block;
     }
 }
